@@ -18,13 +18,24 @@ public class App
     public static void main( String[] args )
     {
         blockchain.add(new Block("GENESIS", "0"));
-        blockchain.add(new Block("Second", blockchain.get(0).hash));
-        blockchain.add(new Block("Third", blockchain.get(1).hash));
+        System.out.println("trying to mine 1..");
+        blockchain.get(0).mineBlock(difficulty);
 
+        blockchain.add(new Block("Second", blockchain.get(0).hash));
+        System.out.println("trying to mine 2");
+        blockchain.get(1).mineBlock(difficulty);
+
+        blockchain.add(new Block("Third", blockchain.get(1).hash));
+        System.out.println("trying to mine 3");
+        blockchain.get(2).mineBlock(difficulty);
+
+        System.out.println("blockchain is valid? - " + isChainValid());
 
         String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
-
+        System.out.println("\nThe blockchain: ");
         System.out.println(blockchainJson);
+
+
 
     }
 
