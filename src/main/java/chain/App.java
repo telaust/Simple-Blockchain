@@ -1,14 +1,9 @@
 package chain;
 
 import com.google.gson.GsonBuilder;
-import com.google.gson.internal.GsonBuildConfig;
 
 import java.util.ArrayList;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
 

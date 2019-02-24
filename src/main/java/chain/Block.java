@@ -2,7 +2,7 @@ package chain;
 
 
 import java.util.*;
-import java.security.MessageDigest;
+
 
 public class Block {
 
